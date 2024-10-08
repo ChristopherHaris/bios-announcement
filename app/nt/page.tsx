@@ -12,7 +12,7 @@ export default function NiceTry() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <Card className="w-full max-w-md mx-auto sm:mx-4 sm:max-w-lg overflow-hidden shadow-lg">
+        <Card className="w-full max-w-sm mx-auto sm:mx-4 sm:max-w-lg overflow-hidden shadow-lg">
           <CardHeader className="bg-red-500 text-white p-4 sm:p-6">
             <CardTitle className="text-2xl sm:text-3xl font-bold text-center">
               Nice Try 👍
