@@ -12,12 +12,13 @@ export default function Onboarding() {
   const [showConfetti, setShowConfetti] = useState(true);
   const searchParams = useSearchParams();
   const name = searchParams.get("name");
+  const division = searchParams.get("division");
   //   const nim = searchParams.get("nim");
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowConfetti(false);
-    }, 5000); 
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -33,7 +34,7 @@ export default function Onboarding() {
         <Card className="w-full max-w-md mx-4 overflow-hidden shadow-lg">
           <CardHeader className="bg-green-500 text-white p-6">
             <CardTitle className="text-3xl font-bold text-center">
-              Selamat, {name}! 🎉
+              Congrats, {name}! 🎉
             </CardTitle>
           </CardHeader>
           <CardContent className="p-6">
@@ -42,11 +43,11 @@ export default function Onboarding() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              <p className="text-2xl text-center text-gray-800 mb-4">
-                Selamat Datang di BIOS Squad!
+              <p className="text-2xl font-bold text-center text-gray-800 mb-4">
+                Welcome to BIOS Squad!
               </p>
               <p className="text-center text-gray-600">
-                Kamu terpilih untuk menjadi bagian dari BIOS Squad.
+                Kamu terpilih untuk menjadi bagian dari <span className="font-bold">{division}</span>.
               </p>
             </motion.div>
             <motion.div

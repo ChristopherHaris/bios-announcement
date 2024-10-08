@@ -29,8 +29,8 @@ export default function Onboarding() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              <p className="text-2xl text-center text-gray-800 mb-4">
-                Maaf tapi kamu belum terpilih menjadi bagian dari BIOS Squad
+              <p className="text-2xl font-bold text-center text-gray-800 mb-4">
+                Maaf, tapi kamu belum terpilih menjadi bagian dari BIOS Squad
               </p>
               <p className="text-center text-gray-600">
                 Tapi jangan sedih, kamu masih bisa coba lagi tahun depan!

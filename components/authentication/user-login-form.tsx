@@ -48,7 +48,14 @@ export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
         .then(function (response) {
           toast.success("Login Successful");
           setIsLoading(false);
-          router.push(`/onboarding?name=${response.data.name}&nim=${response.data.nim}`);
+          if (response.data.hasPassed) {
+            router.push(
+              `/onboarding?name=${response.data.name}&nim=${response.data.nim}&division=${response.data.division}`
+            );
+            return;
+          } else {
+            router.push("/nt");
+          }
         })
         .catch(function (error) {
           console.log(error);
