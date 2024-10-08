@@ -15,19 +15,19 @@ function OnboardingContent() {
 
   return (
     <>
-      <Card className="w-full max-w-md mx-4 overflow-hidden shadow-lg">
-        <CardHeader className="bg-green-500 text-white p-6">
-          <CardTitle className="text-3xl font-bold text-center">
+      <Card className="w-full max-w-md mx-auto sm:mx-4 sm:max-w-lg overflow-hidden shadow-lg">
+        <CardHeader className="bg-green-500 text-white p-4 sm:p-6">
+          <CardTitle className="text-2xl sm:text-3xl font-bold text-center">
             Congrats, {name}! 🎉
           </CardTitle>
         </CardHeader>
-        <CardContent className="p-6">
+        <CardContent className="p-4 sm:p-6">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            <p className="text-2xl font-bold text-center text-gray-800 mb-4">
+            <p className="text-lg sm:text-2xl font-bold text-center text-gray-800 mb-4">
               Welcome to BIOS Squad!
             </p>
             <p className="text-center text-gray-600">
@@ -36,7 +36,7 @@ function OnboardingContent() {
             </p>
           </motion.div>
           <motion.div
-            className="mt-8 flex justify-center"
+            className="mt-6 sm:mt-8 flex justify-center"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{
@@ -47,7 +47,7 @@ function OnboardingContent() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-16 w-16 text-green-500"
+              className="h-12 sm:h-16 w-12 sm:w-16 text-green-500"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
