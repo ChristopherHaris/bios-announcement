@@ -46,7 +46,7 @@ export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
       await axios
         .post("/api/login", values)
         .then(function (response) {
-          toast.success("Login Successful");
+          toast.success("Successful");
           setIsLoading(false);
           if (response.data.hasPassed) {
             router.push(
