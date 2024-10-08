@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { useWindowSize } from "@reactuses/core";
 import { useSearchParams } from "next/navigation";
 
-// A separate component for handling search params inside Suspense
 function OnboardingContent() {
   const searchParams = useSearchParams();
   const name = searchParams.get("name");
@@ -88,7 +87,7 @@ export default function Onboarding() {
         transition={{ duration: 0.5 }}
       >
         <Suspense fallback={<div>Loading...</div>}>
-          <OnboardingContent /> {/* This is where the searchParams logic is */}
+          <OnboardingContent />
         </Suspense>
       </motion.div>
     </div>
